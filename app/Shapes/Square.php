@@ -6,9 +6,18 @@ namespace App\Shapes;
 
 class Square implements ShapeInterface
 {
-    public function __construct(float $num1, float $num2)
+    private $sidelength;
+
+    public function __construct($sidelength)
     {
-        $this->area() 
+        $this->sidelength = $sidelength;
+    }
+        
+
+    public function area() : float
+    {
+        
+        return $this->sidelength * $this->sidelength;
     }
 
 } 
